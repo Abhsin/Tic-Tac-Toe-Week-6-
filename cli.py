@@ -49,7 +49,7 @@ if __name__ == '__main__':
     while winner is None:
         print_board(board)
     #ask user input
-       try:
+        try:
             row, col = get_player_input(current_player) # ask user input
         except ValueError:
             print("Invalid input, try again\n")
