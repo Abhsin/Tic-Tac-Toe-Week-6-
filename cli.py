@@ -1,9 +1,16 @@
 from logic import check_winner
 def get_empty_board():
+    """
+    row_1 = ['O', 'O', 'O']
+    row_2 = ['O', 'O', 'O']
+    row_3 = ['O', 'O', 'O']
+
+    board = [row_1, row_2, row_3]
+    """
     return [
-        ["None", "None","None"],
-        ["None", "None", "None"],
-        ["None","None", "None"],
+        [None, None, None],
+        [None, None, None],
+        [None, None, None],
     ]
 
 
@@ -42,15 +49,16 @@ if __name__ == '__main__':
     while winner is None:
         print_board(board)
     #ask user input
-        row,col = get_player_input(current_player)
-
+       try:
+            row, col = get_player_input(current_player) # ask user input
+        except ValueError:
+            print("Invalid input, try again\n")
+            continue
     # mark the board 
         board[row][col] = current_player
         winner = check_winner(board)
         current_player = switch_player(current_player)
+print_board(board)
+print(f"Winner is {current_player}")
 
-
-    #check for winner
-    # Check if game is draw 
-    #Print the winner
 
