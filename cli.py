@@ -57,8 +57,10 @@ if __name__ == '__main__':
     # mark the board 
         board[row][col] = current_player
         winner = check_winner(board)
+        if winner != None:
+            print(f"Winner is {current_player}")
         current_player = switch_player(current_player)
 print_board(board)
-print(f"Winner is {current_player}")
+
 
 

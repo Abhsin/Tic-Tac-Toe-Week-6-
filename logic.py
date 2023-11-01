@@ -5,7 +5,7 @@ def check_winner(board):
     #    ['O', 'O', 'X'],
     for row in board:
         if len(set(row)) == 1:
-            return row[0]
+                return row[0]
 
     # check columns
     #    ['X', 'X', 'X'],
