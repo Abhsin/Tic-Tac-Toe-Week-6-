@@ -57,3 +57,4 @@ if __name__ == "__main__":
         ['O','X','O'],
         ['X','O','O'],
     ]
+    print(check_winner(board))
